@@ -444,6 +444,9 @@ klist
 samba-tool user create ssa1 P@ssw0rd
 samba-tool user create ssa2 P@ssw0rd
 samba-tool user create ssa3 P@ssw0rd
+samba-tool user enable ssa1
+samba-tool user enable ssa2
+samba-tool user enable ssa3
 
 samba-tool group addmembers ssa_group ssa1,ssa2,ssa3
 ```
