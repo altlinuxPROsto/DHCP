@@ -416,7 +416,7 @@ smbclient -L localhost -U administrator
 
 ### 9.2 Проверка DNS-записей
 
-Убедитесь, что `nameserver 127.0.0.1` в `/etc/resolv.conf`, затем:
+Убедитесь, что `nameserver 127.0.0.1` в `/etc/resolv.conf`, (`apt-get install bind-utils` для проверки host скачать) затем:
 
 ```bash
 host ilove.sa
@@ -539,3 +539,5 @@ iptables -A FORWARD -i "$LAN_IF" -o "$WAN_IF" -s 10.0.128.0/24 -p tcp --dport 44
 iptables-save > /etc/sysconfig/iptables
 systemctl restart iptables
 ```
+
+👍👍👍
