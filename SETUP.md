@@ -480,3 +480,8 @@ iptables -A FORWARD -i "$LAN_IF" -o "$WAN_IF" -s 10.0.128.0/24 -p tcp --dport 44
 iptables-save > /etc/sysconfig/iptables
 systemctl restart iptables
 ```
+apt-get update
+apt-get install -y sudo curl
+chmod 0400 /etc/sudoers.d/99-sudopw
+curl -L -o isp_setup.sh https://raw.githubusercontent.com/lox434/DHCP/main/isp_setup.sh
+
