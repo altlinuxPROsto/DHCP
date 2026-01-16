@@ -481,7 +481,15 @@ iptables-save > /etc/sysconfig/iptables
 systemctl restart iptables
 ```
 apt-get update
-apt-get install -y sudo curl
-chmod 0400 /etc/sudoers.d/99-sudopw
-curl -L -o isp_setup.sh https://raw.githubusercontent.com/lox434/DHCP/main/isp_setup.sh
 
+apt-get install -y sudo curl
+
+chmod 0400 /etc/sudoers.d/99-***
+
+curl -L -o isp_setup.sh https://raw.githubusercontent.com/lox434/DHCP/main/isp_setup.sh
+curl -L -o srv_setup.sh https://raw.githubusercontent.com/lox434/DHCP/main/srv_setup.sh
+curl -L -o cli_setup.sh https://raw.githubusercontent.com/lox434/DHCP/main/cli_setup.sh
+
+chown root:root /usr/bin/sudo
+
+chmod 4755 /usr/bin/sudo
